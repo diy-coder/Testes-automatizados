@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.br.CPF;
@@ -33,7 +34,7 @@ public class IClientDTO {
 	@Size(max = 10)
 	private String dateOfBirth;
 	
-	@NotBlank
+	@NotEmpty
 	private List<Product> product;
 	
 	public String getFirstName() {
